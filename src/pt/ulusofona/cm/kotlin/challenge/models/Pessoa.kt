@@ -80,7 +80,6 @@ data class Pessoa (val nome:String, val dataDeNascimento: Date): Movimentavel {
         val formatter = SimpleDateFormat("dd/MM/yyyy")
         val dateString =formatter.format(dataDeNascimento)
         val localDate = LocalDate.parse(dateString, dateTimeFormatter)
-
         val menorDeIdade = ChronoUnit.YEARS.between(localDate, LocalDate.now())
 
         if (menorDeIdade < 18) {
