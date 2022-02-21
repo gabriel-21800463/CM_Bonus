@@ -24,7 +24,6 @@ class Pessoa (val nome:String, val dataDeNascimento: Date, x: Int, y: Int): Posi
 
     fun tirarCarta(){}
 
-
     override fun toString(): String {
         return "Pessoa | $nome | $dataDeNascimento | Posicao | x:$x | y:$y"
     }
