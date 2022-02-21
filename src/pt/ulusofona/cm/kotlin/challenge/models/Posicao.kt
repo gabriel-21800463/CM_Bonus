@@ -5,7 +5,7 @@ data class Posicao (var x: Int, var y: Int){
 
     fun alterarPosicaoPara(x: Int, y: Int) {
         if (this.x == x && this.y == y) {
-            throw AlterarPosicaoException("!!!")
+            throw AlterarPosicaoException("O veiculo já está nessa posição")
         } else {
             this.x = x
             this.y = y

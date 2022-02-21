@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 import java.util.*
 
-data class Pessoa (val nome:String, val dataDeNascimento: Date): Movimentavel {
+data class Pessoa(val nome:String, val dataDeNascimento: LocalDate): Movimentavel {
 
     var veiculos: ArrayList<Veiculo> = ArrayList()
     var carta: Carta? = null
@@ -33,7 +33,7 @@ data class Pessoa (val nome:String, val dataDeNascimento: Date): Movimentavel {
                 return veiculo
             }
         }
-        return throw VeiculoNaoEncontradoException("!!!")
+        return throw VeiculoNaoEncontradoException("Veiculo não encontrado")
     }
 
     fun venderVeiculo(identificador: String, comprador: Pessoa) {
@@ -83,7 +83,7 @@ data class Pessoa (val nome:String, val dataDeNascimento: Date): Movimentavel {
         val menorDeIdade = ChronoUnit.YEARS.between(localDate, LocalDate.now())
 
         if (menorDeIdade < 18) {
-            throw MenorDeIdadeException("!!!!")
+            throw MenorDeIdadeException("Menor de idade, não pode tirar a carta de condução")
         } else {
             carta = Carta()
         }

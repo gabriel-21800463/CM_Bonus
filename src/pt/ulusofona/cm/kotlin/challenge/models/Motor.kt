@@ -10,7 +10,7 @@ class Motor (val cavalos: Int, val cilindrada: Int): Ligavel{
 
     override fun ligar() {
         if (this.ligado) {
-            throw VeiculoLigadoException("!!!!")
+            throw VeiculoLigadoException("O veiculo já está ligado")
         } else {
             this.ligado= true
         }
@@ -18,7 +18,7 @@ class Motor (val cavalos: Int, val cilindrada: Int): Ligavel{
 
     override fun desligar() {
         if (!this.ligado) {
-            throw VeiculoDesligadoException("!!!")
+            throw VeiculoDesligadoException("O veiculo já está desligado")
         } else {
             this.ligado = false
         }
