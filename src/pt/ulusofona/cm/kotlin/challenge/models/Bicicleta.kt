@@ -1,14 +1,21 @@
 package pt.ulusofona.cm.kotlin.challenge.models
+import pt.ulusofona.cm.kotlin.challenge.exceptions.AlterarPosicaoException
+import java.text.SimpleDateFormat
 
-import pt.ulusofona.cm.kotlin.challenge.interfaces.Movimentavel
+class Bicicleta (identificador: String): Veiculo(identificador){
 
-class Bicicleta (identificador: String): Veiculo(identificador), Movimentavel {
+    override fun requerCarta(): Boolean {
+        return false
+    }
 
+    @Throws(AlterarPosicaoException::class)
     override fun moverPara(x: Int, y: Int) {
-        TODO("Not yet implemented")
+        posicao.alterarPosicaoPara(x, y)
     }
 
     override fun toString(): String {
-        return "Bicicleta | $identificador | data de aquisicao | Posicao | x:0 | y:0"
+        val formatter = SimpleDateFormat("dd-MM-yyyy")
+        val dataAquisicao = formatter.format(dataDeAquisicao)
+        return "Bicicleta | $identificador | $dataAquisicao | Posicao | x:${posicao.x} | y:${posicao.y}"
     }
 }
