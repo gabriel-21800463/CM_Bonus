@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 import java.util.*
 
-data class Pessoa(val nome:String, val dataDeNascimento: LocalDate): Movimentavel {
+data class Pessoa(val nome:String, val dataDeNascimento: Date): Movimentavel {
 
     var veiculos: ArrayList<Veiculo> = ArrayList()
     var carta: Carta? = null

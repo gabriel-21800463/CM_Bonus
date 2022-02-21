@@ -10,10 +10,10 @@ val pessoas: ArrayList<Pessoa> = ArrayList()
 
 fun main() {
 
-    val pessoa1 = Pessoa("Isabella", LocalDate.of(1880, 7, 30))
-    val pessoa2 = Pessoa("Marcella", LocalDate.of(2013, 1, 1))
-    val pessoa3 = Pessoa("Joel", LocalDate.of(1994, 6, 25))
-    val pessoa4 = Pessoa("Eduardo", LocalDate.of(1500, 4, 13))
+    val pessoa1 = Pessoa("Isabella", Date())
+    val pessoa2 = Pessoa("Marcella", Date())
+    val pessoa3 = Pessoa("Joel", Date())
+    val pessoa4 = Pessoa("Eduardo", Date())
     pessoas.add(pessoa1)
     pessoas.add(pessoa2)
     pessoas.add(pessoa3)
