@@ -51,7 +51,7 @@ data class Pessoa (val nome:String, val dataDeNascimento: Date): Movimentavel {
         for (veiculo in veiculos) {
             if (veiculo.identificador.equals(identificador) ) {
                 if (veiculo.requerCarta() && !temCarta()) {
-                    throw PessoaSemCartaException("$nome !!!!")
+                    throw PessoaSemCartaException("$nome não tem carta para conduzir o veículo indicado")
                 }
                 veiculo.moverPara(x, y)
                 break
