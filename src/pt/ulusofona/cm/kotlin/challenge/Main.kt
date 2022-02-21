@@ -20,12 +20,12 @@ fun main() {
     pessoas.add(pessoa4)
 
 
-    val car1: Veiculo = Carro("22-83-GG", Motor(75, 1200))
-    val car2: Veiculo = Carro("54-11-SF", Motor(100, 1600))
-    val car3: Carro = Carro("72-12-BA", Motor(75, 1200))
-    val bike1: Veiculo = Bicicleta("185767257")
-    val bike2: Veiculo = Bicicleta("183957752")
-    val bike3: Veiculo = Bicicleta("157575657")
+    val car1: Veiculo = Carro("22-83-GG", Motor(75, 1300))
+    val car2: Veiculo = Carro("54-11-SF", Motor(100, 1400))
+    val car3: Carro = Carro("72-12-BA", Motor(75, 1500))
+    val bike1: Veiculo = Bicicleta("01")
+    val bike2: Veiculo = Bicicleta("02")
+    val bike3: Veiculo = Bicicleta("03")
     veiculos.add(car1)
     veiculos.add(car2)
     veiculos.add(car3)
@@ -40,16 +40,16 @@ fun main() {
 
     println(pessoas.get(1).pesquisarVeiculo("22-83-GG"))
 
-    pessoas.get(0).moverPara(423423, 3324234)
+    pessoas.get(0).moverPara(10, 10)
     println(pessoas.get(0).posicao)
-    pessoas.get(0).moverPara(42343, 21344)
+    pessoas.get(0).moverPara(13, 12)
     println(pessoas.get(0).posicao)
 
    // pessoas.get(0).desligaCarro(car3)
 
-    val bike4: Veiculo = Bicicleta("1119912")
-    bike4.moverPara(44322, 212121)
-    //bike4.moverPara(44322, 212121)
+    val bike4: Veiculo = Bicicleta("04")
+    bike4.moverPara(16, 20)
+    //bike4.moverPara(16, 20)
     println(bike4)
 }
 
